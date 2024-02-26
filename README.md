@@ -1,3 +1,9 @@
+## BEST EFFORT ONLY
+
+************************************************************************************************************************************************************************************
+**Please note**: this driver is provided on a best-effort basis and is not currently officially supported for LKE or Linode compute. Please try and let us know your feedback! Thanks.
+************************************************************************************************************************************************************************************
+
 ## Getting Started
 
 This README explains how to install and configure the Linode Block Storage provider plugin for [Velero](https://velero.io). The plugin is designed to create filesystem  snapshots of Block Storage backed [PersistentVolumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) that are used in a Kubernetes cluster running on Linode.
