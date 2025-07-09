@@ -73,7 +73,7 @@ This README explains how to install and configure the Linode Block Storage provi
    velero install \
     --provider velero.io/aws \
     --bucket velero-backups \
-    --plugins velero/velero-plugin-for-aws:v1.0.1,displague/velero-plugin-linode:v0.0.1 \
+    --plugins velero/velero-plugin-for-aws:v1.3.0,linode/velero-plugin:v0.1.0 \
     --backup-location-config s3Url=https://us-east-1.linodeobjects.com,region=us-east-1 \
     --use-volume-snapshots=false \
     --secret-file=./cloud-credentials
@@ -81,7 +81,7 @@ This README explains how to install and configure the Linode Block Storage provi
 
 ### Snapshot configuration
 
-1. Enable the `displague/velero-plugin-linode:v0.0.1` snapshot provider. This command will configure Velero to use the plugin for persistent volume snapshots.
+1. Enable the `linode/velero-plugin:v0.1.0` snapshot provider. This command will configure Velero to use the plugin for persistent volume snapshots.
 
    ```sh
    velero snapshot-location create default --provider linode.com/velero
@@ -144,5 +144,5 @@ This README explains how to install and configure the Linode Block Storage provi
 
 ```sh
 make clean
-make container IMAGE=displague/velero-plugin-linode:dev
+make container IMAGE=linode/velero-plugin:dev
 ```

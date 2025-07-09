@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PKG := github.com/displague/velero-plugin-linode
+PKG := github.com/linode/velero-plugin
 BIN := velero-linode
 
-REGISTRY 	?= displague
-IMAGE 		?= $(REGISTRY)/velero-plugin-linode
+REGISTRY 	?= linode
+IMAGE 		?= $(REGISTRY)/velero-plugin
 VERSION 	?= master
 
 # Which architecture to build.
