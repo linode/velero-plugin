@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM golang:1.13-buster AS build
+FROM golang:1.20-buster AS build
 WORKDIR /go/src/github.com/linode/velero-plugin
 COPY go.mod go.sum ./
 COPY velero-linode velero-linode
