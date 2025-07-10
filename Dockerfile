@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM golang:1.13-buster AS build
+FROM golang:1.24 AS build
 WORKDIR /go/src/github.com/linode/velero-plugin
 COPY go.mod go.sum ./
 COPY velero-linode velero-linode
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags "-s -w" -v -o /go/bin/velero-linode ./velero-linode
 
-FROM ubuntu:bionic
+FROM ubuntu:24.04
 RUN mkdir /plugins
 COPY --from=build /go/bin/velero-linode /plugins/
 USER nobody:nobody
